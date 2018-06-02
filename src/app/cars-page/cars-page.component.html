@@ -4,7 +4,8 @@
   <div class="col-md-4">
     <ul class="list-group">
       <li class="list-group-item" *ngFor="let car of cars">
-        <a [routerLink]="['/cars',car.id,car.name]" [queryParams]="{year:car.year,color:car.color}"> {{car.name}}</a>
+        <a [routerLink]="['/cars',car.id,car.name]"
+         [queryParams]="{year:car.year,color:car.color}"> {{car.name}}</a>
       </li>
     </ul>
   </div>

@@ -1,32 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { HomePageComponent } from './home-page/home-page.component';
-import { CarsPageComponent } from './cars-page/cars-page.component';
-import { ColorDirective } from './Shared/color.directive';
-import { CarService } from './Services/car.service';
-import { AppRoutingModule } from './app-routing.module';
-import { CarPageComponent } from './cars-page/car-page/car-page.component';
+import { SharedModule } from './Shared/shared.module';
+
 
 
 @NgModule({
+  
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomePageComponent,
-    CarsPageComponent,
-    ColorDirective,
-    CarPageComponent,
-
+    HomePageComponent
   ],
+
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule
+
   ],
-  providers: [CarService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
